@@ -13,3 +13,5 @@ Run `python3 scripts/build-site.py`. The script creates `dist/` and checks local
 ## GitHub Pages
 
 The workflow in `.github/workflows/pages.yml` builds and publishes `dist/` whenever `main` is updated. In the repository's **Settings → Pages**, choose **GitHub Actions** as the build and deployment source.
+
+The working files in this folder are separate from the `release/` Git checkout. After editing the working files, run `python3 scripts/sync-release.py`, then build, commit and push from `release/`.
