@@ -1,0 +1,6 @@
+/* Use the same two-link navigation as the landing page on every project. */
+.navigation{padding-right:46px}
+.navigation nav{display:flex;grid-template-columns:none;gap:48px;margin-right:0}
+.navigation a:hover,.navigation a:focus-visible,.live-link:hover,.live-link:focus-visible,.hero-links a:hover,.hero-links a:focus-visible{text-decoration:underline;text-underline-offset:4px}
+.project-footer .next-project:hover .next-project-label,.project-footer .next-project:focus-visible .next-project-label{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:700px){.navigation{height:72px;min-height:0;flex-direction:row;gap:0;padding:23px 20px 0}.navigation::after{top:68px;bottom:auto}.navigation nav{gap:24px;font-size:15px}}

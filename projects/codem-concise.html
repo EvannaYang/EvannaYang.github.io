@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CodeM connects team context with AI coding. A product design case study by Evanna Yang.">
+  <title>CodeM — Evanna Yang</title><link rel="stylesheet" href="../styles/codem-figma.css"><link rel="stylesheet" href="../styles/project-footer.css"><link rel="stylesheet" href="../styles/site-navigation.css">
+<link rel="stylesheet" href="../vendor/lenis/lenis.css"><link rel="stylesheet" href="../styles/lenis-integration.css"></head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="navigation" id="site-header"><a class="wordmark" href="../index.html">EVANNA YANG</a><nav aria-label="Site navigation"><a href="../index.html#work">WORK</a><a href="../about.html">ABOUT</a></nav></header>
+  <main id="main"><article>
+    <section class="overview" id="top"><h1>CodeM</h1>
+      <p class="overview-intro">CodeM brought AI coding into the team's existing workflow</p>
+      <dl class="meta"><div><dt>Role</dt><dd>Product designer<br>CLI design lead</dd></div><div><dt>Team</dt><dd>ByteDance · Meego<br>1 PM, 1 developer, and me</dd></div><div><dt>Timeline</dt><dd>Jun–Sept 2026<br>Launched July 15</dd></div></dl>
+      <a class="live-link" href="https://codem.feishu.cn/home" target="_blank" rel="noopener noreferrer">Live Website <img src="../assets/icon-live-website.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      <div class="hero-well"><video src="../Source/codem-cli-motion-hq.mp4" poster="../Source/codem-cli-motion-poster.jpg" width="879" height="550" autoplay muted loop playsinline preload="metadata" aria-label="Final CodeM CLI experience"></video></div>
+    </section>
+    <section class="why" id="why"><h2>Context</h2><p>Individual speed does not equal team speed.</p><p>Coding agents can help one developer move faster, but often start without the decisions behind a task. CodeM extends Meego’s project workflow into coding, so the team can share context and follow progress.</p></section>
+    <section class="solution" id="solution"><h2>Solution</h2><p>One agent. Three ways to work.</p><div class="surface-grid">
+      <img src="../assets/surface-lark.png" width="759" height="670" alt="CodeM in a Lark conversation" loading="lazy">
+      <img src="../assets/surface-cli.png" width="759" height="670" alt="CodeM in the command line" loading="lazy">
+      <img src="../assets/surface-desktop.png" width="759" height="670" alt="CodeM desktop workspace" loading="lazy">
+    </div></section>
+    <section class="cli-intro" id="cli"><h2>CodeM CLI</h2><p>CodeM's broader challenge was to help the whole team move faster. For developers, that meant carrying a requirement received in Lark into the CLI without losing its context.</p><p class="cli-contribution">I led the CLI design from 0 to 1, shaping how the agent makes context, progress, and control visible in the terminal.</p><div class="cli-well"><img src="../Source/image/final_homepage.png" width="3292" height="2058" alt="Final CodeM CLI homepage" loading="lazy"></div></section>
+    <section class="cli-details" id="cli-details">
+      <div class="detail detail-intervene"><h3>Intervene</h3><img src="../assets/cli-intervene.png" width="1336" height="891" alt="CodeM CLI interruption state" loading="lazy"></div>
+      <div class="detail detail-progress"><h3>Progress list</h3><img src="../assets/cli-progress.png" width="1309" height="956" alt="CodeM CLI progress list" loading="lazy"></div>
+      <div class="detail detail-plan"><h3>Plan mode</h3><img src="../assets/cli-state.png" width="1342" height="1207" alt="CodeM CLI plan mode" loading="lazy"></div>
+      <div class="detail detail-state"><img src="../assets/cli-plan.png" width="1311" height="899" alt="CodeM CLI task state" loading="lazy"></div>
+      <div class="detail-more"><h3>More features</h3><img src="../assets/cli-more.png" width="2380" height="934" alt="CodeM CLI workspace context, slash commands, model and intelligence controls" loading="lazy"></div>
+    </section>
+    <section class="beyond-cli" id="beyond-cli"><h2>Beyond the CLI</h2><p>I also designed the CodeM landing page and Web Session features in the admin console.</p><div class="beyond-grid"><img src="../assets/beyond-cli-landing.png" width="1140" height="820" alt="CodeM landing page design" loading="lazy"><img src="../assets/beyond-cli-admin.png" width="1140" height="820" alt="Admin console Web Session design" loading="lazy"></div></section>
+  </article></main>
+  <footer id="contact" class="project-footer"><a class="next-project" href="./linkol-concise.html" aria-label="Next project: Linkol AI" style="--reveal-width:83px"><span class="next-project-label"><span class="project-name">Linkol AI&nbsp;/&nbsp;</span>next project</span><span class="next-project-arrow"><img src="../assets/icon-next-project.svg" width="16" height="16" alt=""></span></a><span class="copyright">© 2026&nbsp; EVANNA YANG</span></footer>
+  <script src="../scripts/codem-header.js" defer></script>
+  <script>
+    const heroVideo = document.querySelector('.hero-well video');
+    new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) heroVideo.play().catch(() => {});
+      else heroVideo.pause();
+    }, { threshold: 0.1 }).observe(heroVideo);
+  </script>
+<script src="../vendor/lenis/lenis.min.js" defer></script><script src="../scripts/lenis-init.js" defer></script></body>
+</html>

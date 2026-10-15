@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gabriel AI — Product Tour</title>
+  <link rel="stylesheet" href="../styles/gabriel-tutorial.css">
+<link rel="stylesheet" href="../vendor/lenis/lenis.css"><link rel="stylesheet" href="../styles/lenis-integration.css"></head>
+<body>
+  <main class="viewport" aria-label="Gabriel AI product tour">
+    <div class="canvas" id="canvas">
+      <div class="dashboard" aria-hidden="true">
+        <aside class="sidebar">
+          <div class="brand"><span class="brand-mark"></span><strong>Gabriel AI</strong></div>
+          <div class="nav-item active" id="dashboard-nav"><img src="../assets/gabriel-tutorial/ba504.svg" alt="">Dashboard</div>
+          <div class="nav-item" id="analytics-nav"><img src="../assets/gabriel-tutorial/2ad47.svg" alt="">Analytics</div>
+          <div class="nav-item" id="voice-nav"><img src="../assets/gabriel-tutorial/56d06.svg" alt="">My Voice</div>
+          <div class="nav-item"><img src="../assets/gabriel-tutorial/070ec.svg" alt="">Profile</div>
+          <div class="nav-item"><img src="../assets/gabriel-tutorial/33ad1.svg" alt="">Settings</div>
+          <div class="sidebar-bottom">
+            <div class="nav-item"><img src="../assets/gabriel-tutorial/539d6.svg" alt="">Help</div>
+            <div class="nav-item"><img src="../assets/gabriel-tutorial/3c8ce.svg" alt="">Logout</div>
+          </div>
+        </aside>
+        <div class="search"><span>Ask me anything about Gabriel AI!</span><img src="../assets/gabriel-tutorial/c43b8.svg" alt=""></div>
+        <div class="campaign-top" id="campaign-top">Start a Campaign</div>
+        <h1>Welcome back, John!</h1>
+        <section class="card recent"><h2>Recent Campaigns</h2><i>No Recent campaigns</i></section>
+        <section class="card billing"><h2>Credits &amp; Billing</h2><i>No billing history</i></section>
+        <section class="card calls"><h2>Calls sent last week</h2><i>No call history</i></section>
+        <section class="card engagement"><h2>Engagement Rate</h2><img src="../assets/gabriel-tutorial/98b16.svg" alt=""></section>
+        <section class="card info"><h2>Information for AI</h2>
+          <div class="pill peach"><img src="../assets/gabriel-tutorial/096ec.svg" alt="">Political Outreach</div>
+          <div class="pill blue"><img src="../assets/gabriel-tutorial/e3dbb.svg" alt="">Target users mostly locate in Alaska</div>
+          <div class="pill grey"><img src="../assets/gabriel-tutorial/0a5fc.svg" alt="">Your voice here</div>
+          <div class="pill plain"><img src="../assets/gabriel-tutorial/80b8e.svg" alt="">Political Outreach</div>
+          <div class="pill plain"><img src="../assets/gabriel-tutorial/096ec.svg" alt="">Political Outreach</div>
+          <div class="pill plain"><img src="../assets/gabriel-tutorial/00201.svg" alt="">Political Outreach</div>
+        </section>
+      </div>
+      <img class="mask" id="mask" alt="">
+      <img class="pointer" id="pointer" alt="">
+      <div class="tour-card" id="tour-card" role="dialog" aria-modal="true" aria-live="polite">
+        <div class="welcome-mark" id="welcome-mark"></div>
+        <h2 id="tour-title"></h2>
+        <p id="tour-copy"></p>
+        <button type="button" class="skip" id="skip">Skip</button>
+        <button type="button" class="next" id="next"></button>
+      </div>
+      <button type="button" class="replay" id="replay" hidden>Replay tour</button>
+    </div>
+  </main>
+  <script src="../scripts/gabriel-tutorial.js"></script>
+<script src="../vendor/lenis/lenis.min.js" defer></script><script src="../scripts/lenis-init.js" defer></script></body>
+</html>

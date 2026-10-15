@@ -1,0 +1,17 @@
+.DS_Store
+.impeccable/
+Source/*
+!Source/codem-cli-motion-hq.mp4
+!Source/codem-cli-motion-poster.jpg
+!Source/image/
+Source/image/*
+!Source/image/final_homepage.png
+*.docx
+*.rtf
+codem-brief.md
+codem-assets.md
+dist/
+release/
+assets/linkol-laptop/screen.mp4
+assets/linkol-laptop/screen-poster.jpg
+assets/linkol-laptop/preview-composite.png
