@@ -167,7 +167,7 @@ body strong{font-weight:600}
 }
 
 /* Full-resolution Figma exports include the window shadows around each frame. */
-.feature-item h3,.feature-more h3{font-family:Inter,"Helvetica Neue",Arial,sans-serif;font-size:16px;line-height:24px;font-weight:400}
+.feature-item h3,.feature-more h3{font-family:Inter,"Helvetica Neue",Arial,sans-serif;font-size:16px;line-height:28px;font-weight:400}
 .feature-crop img,.feature-plan .feature-crop img{width:120.4%;max-width:none;height:auto;left:-7.82%;top:-7.82cqw}
 
 /* Keep the live site inside one large, interactive viewport. */
@@ -197,9 +197,13 @@ body strong{font-weight:600}
  .bounce-stage .bounce-card:nth-child(5){left:811px!important;width:349px!important}
 }
 
-/* The four CLI screens are complete exports with captions outside the images. */
-.feature-crop,.feature-intervene .feature-crop,.feature-progress .feature-crop,.feature-plan .feature-crop,.feature-state .feature-crop{height:auto!important;aspect-ratio:auto!important;overflow:visible}
-.feature-crop img,.feature-plan .feature-crop img{position:static;width:100%;max-width:100%;height:auto;left:auto;top:auto;object-fit:contain}
+/* Crop each full-resolution export to the exact Figma screen frame. */
+.feature-crop{height:auto!important;aspect-ratio:550/308!important;overflow:hidden;box-shadow:none;background:transparent}
+.feature-progress .feature-crop{aspect-ratio:550/341!important}
+.feature-plan .feature-crop{aspect-ratio:550/389!important}
+.feature-state .feature-crop{aspect-ratio:550/312!important}
+.feature-crop img,.feature-plan .feature-crop img{position:absolute;width:120.4%;max-width:none;height:auto;left:-7.82%;top:-7.82cqw;object-fit:contain}
+.feature-progress .feature-crop img,.feature-state .feature-crop img{left:-12.2%}
 .feature-item h3{display:block;color:#737373}
 
 .open-landing{right:20px;top:20px;width:20px;height:20px}

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="CodeM connects team context with AI coding. A product design case study by Evanna Yang.">
-  <title>CodeM — Evanna Yang</title><link rel="stylesheet" href="../styles/codem-figma.css?v=20261017"><link rel="stylesheet" href="../styles/project-footer.css"><link rel="stylesheet" href="../styles/site-navigation.css">
+  <title>CodeM — Evanna Yang</title><link rel="stylesheet" href="../styles/codem-figma.css?v=20261017b"><link rel="stylesheet" href="../styles/project-footer.css"><link rel="stylesheet" href="../styles/site-navigation.css">
 <link rel="stylesheet" href="../vendor/lenis/lenis.css"><link rel="stylesheet" href="../styles/lenis-integration.css"></head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -13,7 +13,7 @@
       <p class="overview-intro">CodeM brought AI coding into the team's existing workflow</p>
       <dl class="meta"><div><dt>Role</dt><dd>Product designer<br>CLI design lead</dd></div><div><dt>Team</dt><dd>ByteDance · Meego<br>1 PM, 1 developer, and me</dd></div><div><dt>Timeline</dt><dd>Jun–Sept 2026<br>Launched July 15</dd></div></dl>
       <a class="live-link" href="https://codem.feishu.cn/home" target="_blank" rel="noopener noreferrer">Live Website <img src="../assets/icon-live-website.svg" width="14" height="14" alt="" aria-hidden="true"></a>
-      <div class="hero-well"><video src="../Source/codem-cli-motion-hq.mp4" poster="../Source/codem-cli-motion-poster.jpg" width="879" height="550" autoplay muted loop playsinline preload="metadata" aria-label="Final CodeM CLI experience"></video></div>
+      <div class="hero-well"><video src="../Source/codem-cli-motion-hq.mp4" poster="../Source/codem-cli-motion-poster.jpg" width="879" height="550" autoplay muted loop playsinline preload="auto" disablepictureinpicture aria-label="Final CodeM CLI experience"></video></div>
     </section>
     <section class="why" id="why"><h2>Context</h2><p>Individual speed does not equal team speed.</p><p>Coding agents can help one developer move faster, but often start without the decisions behind a task. CodeM extends Meego’s project workflow into coding, so the team can share context and follow progress.</p></section>
     <section class="solution" id="solution"><h2>Solution</h2><p>One agent. Three ways to work.</p><div class="surface-grid">
@@ -46,12 +46,12 @@
       <div class="feature-item feature-intervene"><h3>Intervene</h3><div class="feature-crop"><img src="../assets/cli-intervene-new.png" width="2644" height="1781" alt="CodeM CLI interruption state" loading="lazy"></div></div>
       <div class="feature-item feature-progress"><h3>Progress list</h3><div class="feature-crop"><img src="../assets/cli-progress-new.png" width="2646" height="1912" alt="CodeM CLI task progress" loading="lazy"></div></div>
       <div class="feature-item feature-plan"><h3>Plan mode</h3><div class="feature-crop"><img src="../assets/cli-plan-new.png" width="2656" height="2105" alt="CodeM CLI Plan Mode" loading="lazy"></div></div>
-      <div class="feature-item feature-state"><h3>Task continuity</h3><div class="feature-crop"><img src="../assets/cli-state-new.png" width="2650" height="1797" alt="CodeM CLI task continuity" loading="lazy"></div></div>
+      <div class="feature-item feature-state"><div class="feature-crop"><img src="../assets/cli-state-new.png" width="2650" height="1797" alt="CodeM CLI task continuity" loading="lazy"></div></div>
       <div class="feature-more"><h3>More features</h3><img src="../assets/cli-more-new.png" width="4760" height="1868" alt="CodeM CLI workspace context, slash commands, model and intelligence controls" loading="lazy"></div>
     </section>
     <section class="case-panel landing-overview" id="landing-overview" aria-labelledby="landing-title">
       <h2 id="landing-title">Landing Page</h2><p class="panel-copy">I designed and built the CodeM landing page, carrying the visual system from Figma into a responsive, interactive website.</p>
-      <div class="landing-scroll-region"><div class="landing-well" data-lenis-prevent-wheel><div class="landing-scrollport" role="region" aria-label="Scroll the CodeM landing page preview"><div class="landing-live-window"><iframe src="https://codem.feishu.cn/home" title="Live CodeM landing page" loading="lazy" scrolling="yes"></iframe></div></div><a class="open-landing" href="https://codem.feishu.cn/home" target="_blank" rel="noopener noreferrer" aria-label="Open live CodeM landing page"><img src="../assets/icon-live-website.svg" width="36" height="36" alt="" aria-hidden="true"></a></div></div>
+      <div class="landing-scroll-region"><div class="landing-well"><div class="landing-scrollport" role="region" aria-label="Scroll the CodeM landing page preview"><div class="landing-live-window"><iframe src="https://codem.feishu.cn/home" title="Live CodeM landing page" loading="lazy" scrolling="yes"></iframe></div></div><a class="open-landing" href="https://codem.feishu.cn/home" target="_blank" rel="noopener noreferrer" aria-label="Open live CodeM landing page"><img src="../assets/icon-live-website.svg" width="36" height="36" alt="" aria-hidden="true"></a></div></div>
     </section>
     <section class="case-panel landing-design" id="landing-design" aria-labelledby="landing-design-title">
       <h2 id="landing-design-title">Translation &amp; interaction design</h2>
@@ -71,10 +71,13 @@
   <script src="../scripts/codem-case.js?v=20261017" defer></script>
   <script>
     const heroVideo = document.querySelector('.hero-well video');
-    new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) heroVideo.play().catch(() => {});
-      else heroVideo.pause();
-    }, { threshold: 0.1 }).observe(heroVideo);
+    const startHeroVideo = () => heroVideo.play().catch(() => {});
+    heroVideo.addEventListener('loadeddata', startHeroVideo);
+    window.addEventListener('pageshow', startHeroVideo);
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) startHeroVideo();
+    });
+    startHeroVideo();
   </script>
 <script src="../vendor/lenis/lenis.min.js" defer></script><script src="../scripts/lenis-init.js" defer></script></body>
 </html>
