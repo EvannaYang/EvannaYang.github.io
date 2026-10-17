@@ -22,17 +22,53 @@
       <img src="../assets/surface-desktop.png" width="759" height="670" alt="CodeM desktop workspace" loading="lazy">
     </div></section>
     <section class="cli-intro" id="cli"><h2>CodeM CLI</h2><p>CodeM's broader challenge was to help the whole team move faster. For developers, that meant carrying a requirement received in Lark into the CLI without losing its context.</p><p class="cli-contribution">I led the CLI design from 0 to 1, shaping how the agent makes context, progress, and control visible in the terminal.</p><div class="cli-well"><img src="../Source/image/final_homepage.png" width="3292" height="2058" alt="Final CodeM CLI homepage" loading="lazy"></div></section>
-    <section class="cli-details" id="cli-details">
-      <div class="detail detail-intervene"><h3>Intervene</h3><img src="../assets/cli-intervene.png" width="1336" height="891" alt="CodeM CLI interruption state" loading="lazy"></div>
-      <div class="detail detail-progress"><h3>Progress list</h3><img src="../assets/cli-progress.png" width="1309" height="956" alt="CodeM CLI progress list" loading="lazy"></div>
-      <div class="detail detail-plan"><h3>Plan mode</h3><img src="../assets/cli-state.png" width="1342" height="1207" alt="CodeM CLI plan mode" loading="lazy"></div>
-      <div class="detail detail-state"><img src="../assets/cli-plan.png" width="1311" height="899" alt="CodeM CLI task state" loading="lazy"></div>
-      <div class="detail-more"><h3>More features</h3><img src="../assets/cli-more.png" width="2380" height="934" alt="CodeM CLI workspace context, slash commands, model and intelligence controls" loading="lazy"></div>
+    <section class="case-panel cli-medium" id="cli-medium" aria-labelledby="medium-title">
+      <h2 id="medium-title">Learn the medium</h2>
+      <p class="panel-copy medium-first">I used <strong>five coding agents</strong> to study how they communicate actions, feedback, interruption, and recovery.</p>
+      <p class="panel-copy medium-second">I then mapped <strong>Ratatui</strong>’s layout and interaction constraints to understand what the interface could support.</p>
+      <div class="bounce-viewport"><div class="bounce-stage" aria-label="Five coding agent interfaces">
+        <button class="bounce-card" type="button" aria-label="Cursor" data-card="0"><img src="../assets/codem-bounce/1.png" width="1324" height="960" alt="Cursor agent interface"><span>Cursor</span></button>
+        <button class="bounce-card" type="button" aria-label="Grok" data-card="1"><img src="../assets/codem-bounce/2.png" width="1436" height="960" alt="Grok agent interface"><span>Grok</span></button>
+        <button class="bounce-card" type="button" aria-label="Codex" data-card="2"><img src="../assets/codem-bounce/3.png" width="1492" height="960" alt="Codex agent interface"><span>Codex</span></button>
+        <button class="bounce-card" type="button" aria-label="Claude Code" data-card="3"><img src="../assets/codem-bounce/4.png" width="1548" height="960" alt="Claude Code agent interface"><span>Claude Code</span></button>
+        <button class="bounce-card" type="button" aria-label="OpenCode" data-card="4"><img src="../assets/codem-bounce/5.png" width="1396" height="960" alt="OpenCode agent interface"><span>OpenCode</span></button>
+      </div></div>
     </section>
-    <section class="beyond-cli" id="beyond-cli"><h2>Beyond the CLI</h2><p>I also designed the CodeM landing page and Web Session features in the admin console.</p><div class="beyond-grid"><img src="../assets/beyond-cli-landing.png" width="1140" height="820" alt="CodeM landing page design" loading="lazy"><img src="../assets/beyond-cli-admin.png" width="1140" height="820" alt="Admin console Web Session design" loading="lazy"></div></section>
+    <section class="case-panel cli-homepage" id="cli-homepage" aria-labelledby="homepage-title">
+      <h2 id="homepage-title">Rethink the homepage</h2>
+      <p class="panel-copy">My first direction borrowed too much from desktop UI. Through iteration, I replaced competing panels and status cards with a focused launch state: workspace context stays visible, while the command input remains the primary action.</p>
+      <div class="homepage-shot"><img src="../Source/image/final_homepage.png" width="3292" height="2058" alt="Final CodeM CLI homepage" loading="lazy"></div>
+    </section>
+    <section class="case-panel cli-features" id="cli-features" aria-labelledby="features-title">
+      <h2 id="features-title">Make agent work understandable</h2>
+      <p class="panel-copy">In a two-day sprint with the PM and developer, I designed three key interaction patterns:</p>
+      <ul class="feature-summary"><li><strong>Interruption:</strong> give users a clear way to step in while the agent works.</li><li><strong>Task continuity:</strong> keep the current task and progress visible when work runs long.</li><li><strong>Plan Mode:</strong> make planning distinct from execution.</li></ul>
+      <div class="feature-item feature-intervene"><h3>Intervene</h3><div class="feature-crop"><img src="../assets/cli-intervene-new.png" width="2644" height="1781" alt="CodeM CLI interruption state" loading="lazy"></div></div>
+      <div class="feature-item feature-progress"><h3>Progress list</h3><div class="feature-crop"><img src="../assets/cli-progress-new.png" width="2646" height="1912" alt="CodeM CLI task progress" loading="lazy"></div></div>
+      <div class="feature-item feature-plan"><h3>Plan mode</h3><div class="feature-crop"><img src="../assets/cli-plan-new.png" width="2656" height="2105" alt="CodeM CLI Plan Mode" loading="lazy"></div></div>
+      <div class="feature-item feature-state"><h3>Task continuity</h3><div class="feature-crop"><img src="../assets/cli-state-new.png" width="2650" height="1797" alt="CodeM CLI task continuity" loading="lazy"></div></div>
+      <div class="feature-more"><h3>More features</h3><img src="../assets/cli-more-new.png" width="4760" height="1868" alt="CodeM CLI workspace context, slash commands, model and intelligence controls" loading="lazy"></div>
+    </section>
+    <section class="case-panel landing-overview" id="landing-overview" aria-labelledby="landing-title">
+      <h2 id="landing-title">Landing Page</h2><p class="panel-copy">I designed and built the CodeM landing page, carrying the visual system from Figma into a responsive, interactive website.</p>
+      <div class="landing-scroll-region"><div class="landing-well" data-lenis-prevent-wheel><div class="landing-scrollport" role="region" aria-label="Scroll the CodeM landing page preview"><div class="landing-live-window"><iframe src="https://codem.feishu.cn/home" title="Live CodeM landing page" loading="lazy" scrolling="yes"></iframe></div></div><a class="open-landing" href="https://codem.feishu.cn/home" target="_blank" rel="noopener noreferrer" aria-label="Open live CodeM landing page"><img src="../assets/icon-live-website.svg" width="36" height="36" alt="" aria-hidden="true"></a></div></div>
+    </section>
+    <section class="case-panel landing-design" id="landing-design" aria-labelledby="landing-design-title">
+      <h2 id="landing-design-title">Translation &amp; interaction design</h2>
+      <p class="panel-copy design-first">I developed a more <strong>efficient</strong> way to translate Figma designs into working pages: focus each <strong>Codex</strong> task on a small, clear target, then compare the result with the design in the browser. Repeating that cycle helped me improve visual fidelity while using <strong>fewer tokens</strong>.</p>
+      <p class="panel-copy design-second">I treated <strong>interaction</strong> as a way to explain the product. I turned key screens into <strong>short animations</strong> and <strong>interactive moments</strong>, choosing motion that helps visitors understand what CodeM does without relying on more copy.</p>
+      <div class="landing-comparison"><div class="landing-static"><img src="../assets/codem-old-hero.png" width="2000" height="1072" alt="Old static CodeM hero image" loading="lazy"></div><div class="landing-live"><iframe src="./codem-hero-embed.html" title="Interactive CodeM Hero" loading="lazy"></iframe></div></div>
+    </section>
+    <section class="case-panel admin-overview" id="admin-overview" aria-labelledby="admin-title">
+      <h2 id="admin-title">Admin Console</h2><p class="panel-copy">I also designed CodeM’s reporting experience, bringing enterprise and workspace usage into one view. Explore task activity, change the date range, and zoom into trends.</p>
+      <a class="demo-link" href="#admin-demo">Explore the demo <img src="../assets/icon-live-website.svg" width="14" height="14" alt="" aria-hidden="true"></a>
+      <div class="admin-well" id="admin-demo"><div class="admin-window"><iframe src="../analytics-demo/index.html" title="Interactive CodeM data reports" loading="lazy"></iframe></div></div>
+    </section>
+    <section class="case-panel reflection" id="reflection" aria-labelledby="reflection-title"><h2 id="reflection-title">Reflection</h2><p class="panel-copy">I learned that a useful coding agent needs to carry team context into execution and make its progress and controls clear. Designing CodeM across the CLI, landing page, and admin console taught me to express that idea in ways that fit each surface.</p></section>
   </article></main>
   <footer id="contact" class="project-footer"><a class="next-project" href="./linkol-concise.html" aria-label="Next project: Linkol AI" style="--reveal-width:83px"><span class="next-project-label"><span class="project-name">Linkol AI&nbsp;/&nbsp;</span>next project</span><span class="next-project-arrow"><img src="../assets/icon-next-project.svg" width="16" height="16" alt=""></span></a><span class="copyright">© 2026&nbsp; EVANNA YANG</span></footer>
   <script src="../scripts/codem-header.js" defer></script>
+  <script src="../scripts/codem-case.js" defer></script>
   <script>
     const heroVideo = document.querySelector('.hero-well video');
     new IntersectionObserver(([entry]) => {

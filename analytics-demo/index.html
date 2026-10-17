@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CodeM 数据报表 Demo</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <div class="brand"><img src="./assets/img6-b2e97.svg" alt="飞书项目"><span class="brand-collapse"><img src="./assets/img24X24-d57ed.svg" alt=""></span></div>
+        <div class="menu" id="main-menu">
+          <div class="menu-item hover-only"><img src="./assets/img24X25-ae580.svg" alt="">对话列表</div>
+          <div class="menu-item hover-only"><img src="./assets/img24X26-65c81.svg" alt="">设置</div>
+          <button class="menu-item" data-view="enterprise"><img src="./assets/imgColumn-dab1c.svg" alt="">企业数据报表</button>
+          <div class="menu-item hover-only"><img src="./assets/imgClock3-f11c8.svg" alt="">自动化 <small>5</small></div>
+        </div>
+        <div class="space-heading">空间 <span class="hover-only">＋</span></div>
+        <div class="menu" id="space-menu">
+          <button class="menu-item" data-view="rd"><span class="space-mark orange">M</span>研发效能</button>
+          <button class="menu-item" data-view="ai"><span class="space-mark green">L</span>AI 应用平台</button>
+          <div class="menu-item hover-only"><span class="space-mark gray">P</span>客户交付 <em>个人</em></div>
+          <div class="menu-item hover-only muted"><img src="./assets/img24X28-be8ae.svg" alt="">添加空间</div>
+        </div>
+      </div>
+      <div class="sidebar-bottom"><span class="account"><img src="./assets/imgAvatarSource-4300b.png" alt="">DC</span><span class="hover-only"><img src="./assets/img24X29-b5744.svg" alt=""></span><span class="hover-only"><img src="./assets/img24X30-402dd.svg" alt=""></span></div>
+    </aside>
+    <main class="main">
+      <div id="space-header" class="space-header hidden"><span id="space-logo" class="space-logo">M</span><span><strong id="space-name">研发效能</strong><small>This is a description</small></span></div>
+      <div class="workspace">
+        <nav id="space-subnav" class="subnav hidden">
+          <div class="hover-only">Agent 定义</div><div class="hover-only">技能和工具</div><div class="hover-only">沙箱</div><div class="selected">数据报表</div><div class="hover-only">操作记录</div><div class="hover-only">空间信息</div>
+        </nav>
+        <div class="content">
+          <header class="report-header">
+            <div><h1 id="report-title">企业数据报表</h1><p><span id="report-description">企业内 CodeM 的整体使用规模和各项目空间的使用分布。</span> <span>数据更新至 2026.07.30</span> <a class="hover-only">了解更多</a></p></div>
+            <button id="date-trigger" class="date-trigger"><img src="./assets/imgIconCalendar-b6cfc.svg" alt=""><span id="date-label">2026/6/28-2026/08/01</span></button>
+          </header>
+          <div id="report-body"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div id="calendar-overlay" class="calendar-overlay hidden"><div class="calendar-popover" role="dialog" aria-label="选择日期范围"><div class="calendar-months" id="calendar-months"></div><div class="calendar-actions"><button data-days="7">近 7 天</button><button data-days="30">近 30 天</button><button data-days="90">近 90 天</button></div></div></div>
+  <script src="./app.js"></script>
+</body>
+</html>

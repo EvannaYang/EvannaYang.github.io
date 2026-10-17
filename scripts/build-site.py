@@ -14,6 +14,7 @@ PAGES = (
     "about.html",
     "onboarding-prototype.html",
     "projects/codem-concise.html",
+    "projects/codem-hero-embed.html",
     "projects/linkol-concise.html",
     "projects/gabriel-concise.html",
     "projects/gabriel-tutorial.html",
@@ -71,6 +72,7 @@ def main():
         if (Path(directory).relative_to(ROOT / "assets") / name).as_posix() in EXCLUDED_ASSETS
         or name == ".DS_Store"
     })
+    copytree(ROOT / "analytics-demo", DIST / "analytics-demo")
     for relative in PUBLIC_SOURCE_FILES:
         target = DIST / "Source" / relative
         target.parent.mkdir(parents=True, exist_ok=True)
